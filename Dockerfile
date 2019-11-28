@@ -1,8 +1,11 @@
 ARG LOGSTASH_BASE_IMAGE
+
 FROM $LOGSTASH_BASE_IMAGE
 
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf
 
-ADD pipeline/ /usr/share/logstash/pipeline/
+RUN rm -f /usr/share/logstash/config/pipelines.yml
 
-ADD config/ /usr/share/logstash/config/
+COPY pipeline/ /usr/share/logstash/pipeline/
+
+COPY config/pipelines.yml /usr/share/logstash/config/
