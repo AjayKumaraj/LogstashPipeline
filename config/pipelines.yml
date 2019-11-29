@@ -1,8 +1,8 @@
 - pipeline.id: my-pipeline_1
-  path.config: "/usr/share/logstash/config/sample_1.conf"
-  pipeline.workers: 2
-  queue.type: persisted
+  path.config: "/usr/share/logstash/pipeline/sample_1.conf"
+#  pipeline.workers: 2
+#  queue.type: persisted
 - pipeline.id: my-pipeline_2
-  path.config: "/usr/share/logstash/config/sample_2.conf"
-  queue.type: persisted
-  pipeline.workers: 2
+  path.config: "/usr/share/logstash/pipeline/sample_2.conf"
+#  queue.type: persisted
+#  pipeline.workers: 2
